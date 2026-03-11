@@ -1,0 +1,91 @@
+html
+{
+	--text: #F7C654;
+	color: var(--text);
+	background-color: hsl(210, 48%, 20%);
+
+	--outline-size: 1px;
+	--outline-size-negative: calc(-1 * var(--outline-size));
+	--outline-color: black;
+	text-shadow:
+		var(--outline-size-negative) var(--outline-size-negative) var(--outline-color),
+		var(--outline-size-negative) var(--outline-size) var(--outline-color),
+		var(--outline-size) var(--outline-size) var(--outline-color),
+		var(--outline-size) var(--outline-size-negative) var(--outline-color),
+		0 var(--outline-size) var(--outline-color),
+		var(--outline-size) 0 var(--outline-color),
+		0 var(--outline-size-negative) var(--outline-color),
+		var(--outline-size-negative) 0 var(--outline-color);
+}
+body
+{
+	margin: 0;
+	padding: 0;
+}
+header
+{
+	z-index: 1;
+
+	position: fixed;
+
+	display: flex;
+
+	justify-content: space-between;
+
+	padding-left: 0.25em;
+	padding-right: 5%;
+	
+	width: calc(95% - 0.25em);
+	
+	height: 2em;
+	
+	background-color: #91B6D8;
+
+	font-weight: bold;
+	font-size: 2em;
+}
+header div
+{
+	display: flex;
+
+	align-items: center;
+}
+header img
+{
+	height: 2em;
+	padding-bottom: 0.4em;
+	align-self: center;
+}
+header a
+{
+	margin-inline: 0.5em;
+	color: var(--text);
+}
+#content>div
+{
+	--height: 100vh;
+
+	position: absolute;
+	width: 100%;
+	height: var(--height);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#People
+{
+	top: 0;
+}
+#Projects
+{
+	top: var(--height);
+}
+#Contact
+{
+	top: calc(var(--height) * 2);
+}
+#Career
+{
+	top: calc(var(--height) * 3);
+}
