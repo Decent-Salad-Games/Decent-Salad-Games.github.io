@@ -33,9 +33,9 @@ header
 	justify-content: space-between;
 
 	padding-left: 0.25em;
-	padding-right: 5%;
+	padding-right: 2.5%;
 	
-	width: calc(95% - 0.25em);
+	width: calc(97.5% - 0.25em);
 	
 	height: 2em;
 	
@@ -73,7 +73,7 @@ header a
 	align-items: center;
 	justify-content: center;
 }
-#People
+#About
 {
 	top: 0;
 }
@@ -81,11 +81,15 @@ header a
 {
 	top: var(--height);
 }
-#Contact
+#People
 {
 	top: calc(var(--height) * 2);
 }
-#Career
+#Contact
 {
 	top: calc(var(--height) * 3);
+}
+#Career
+{
+	top: calc(var(--height) * 4);
 }
