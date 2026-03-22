@@ -22,6 +22,20 @@ body
 	margin: 0;
 	padding: 0;
 }
+@media(max-width: 1555px)
+{
+	header
+	{
+		min-height: min-content;
+	}
+	#navbar
+	{
+		display: grid !important;
+		grid-template-rows: 1fr 1fr;
+		grid-auto-flow: column;
+		min-height: min-content;
+	}
+}
 header
 {
 	z-index: 1;
@@ -47,7 +61,6 @@ header
 header div
 {
 	display: flex;
-
 	align-items: center;
 }
 header img
@@ -72,6 +85,8 @@ header a
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	scroll-margin-top: 5vh;
 }
 #About
 {
@@ -92,4 +107,11 @@ header a
 #Career
 {
 	top: calc(var(--height) * 4);
+}
+#FanContentPolicy
+{
+	top: calc(var(--height) * 5);
+	display: block !important;
+	box-sizing: border-box;
+	padding: 2%;
 }
