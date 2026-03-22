@@ -22,7 +22,7 @@ body
 	margin: 0;
 	padding: 0;
 }
-@media(max-width: 1555px)
+@media (max-width: 1555px), (max-aspect-ratio: 1/1)
 {
 	header
 	{
