@@ -1,21 +1,10 @@
-.flex
-{
-	display: flex;
-}
-.col
-{
-	flex-direction: column;
-}
-.row
-{
-	flex-direction: row;
-}
-
 body
 {
 	--text: #F7C654;
+	--bright-bg: #91B6D8;
+	--dark-bg: hsl(210, 48%, 20%);
 	color: var(--text);
-	background-color: hsl(210, 48%, 20%);
+	background-color: var(--dark-bg);
 
 	--outline-size: 1px;
 	--outline-size-negative: calc(-1 * var(--outline-size));
@@ -64,7 +53,7 @@ header
 	
 	width: 100vw;
 	
-	background-color: #91B6D8;
+	background-color: var(--bright-bg);
 
 	font-weight: bold;
 	font-size: 2em;
@@ -93,6 +82,8 @@ header a
 }
 #content > div
 {
+	box-sizing: border-box;
+
 	width: 100%;
 	height: 100%;
 
@@ -100,10 +91,97 @@ header a
 	align-items: center;
 	justify-content: center;
 }
+#content a
+{
+	color: var(--bright-bg);
+}
+
+
+@media (max-aspect-ratio: 4/3)
+{
+	#Members
+	{
+		justify-content: start !important;
+		flex-direction: column !important;
+	}
+	#Members > div
+	{
+		flex-direction: row !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	#Members .tray
+	{
+		flex-direction: column !important;
+		border-bottom: none !important;
+		gap: 0.75em !important;
+		padding-inline: 0 !important;
+	}
+}
+#content > #Members
+{
+	align-items: stretch;
+	padding: 1em;
+	gap: 1em;
+}
+#Members > div
+{
+	display: flex;
+	flex-direction: column;
+
+	max-width: 15vw;
+
+	align-items: center;
+
+	border: solid var(--text) 2px;
+	border-radius: 1em;
+	overflow: hidden;
+
+	gap: 1em
+}
+#Members h2
+{
+	margin: 0;
+}
+#Members > div > img
+{
+	width: 15vw;
+	height: 15vw;
+}
+#Members .tray
+{
+	display: flex;
+	flex-direction: row;
+	
+	align-items: center;
+
+	border-bottom: solid var(--text) 2px;
+
+	--size: 1.75em;
+
+	gap: var(--size);
+	padding-inline: var(--size);
+	padding-block: calc(var(--size) / 4);
+}
+#Members .tray img
+{
+	width: var(--size);
+}
+#Members p
+{
+	padding-inline: 1em;
+	text-align: justify;
+	margin-block: 0;
+}
+#Members p:first-of-type
+{
+	color: var(--bright-bg);
+}
+
 
 #content > #FanContentPolicy
 {
 	display: block;
-	box-sizing: border-box;
 	padding: 2%;
 }
