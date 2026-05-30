@@ -1,4 +1,17 @@
-html
+.flex
+{
+	display: flex;
+}
+.col
+{
+	flex-direction: column;
+}
+.row
+{
+	flex-direction: row;
+}
+
+body
 {
 	--text: #F7C654;
 	color: var(--text);
@@ -16,13 +29,17 @@ html
 		var(--outline-size) 0 var(--outline-color),
 		0 var(--outline-size-negative) var(--outline-color),
 		var(--outline-size-negative) 0 var(--outline-color);
-}
-body
-{
+
 	margin: 0;
 	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	height: 100vh;
 }
-@media (max-width: 1555px), (max-aspect-ratio: 1/1)
+
+@media (max-aspect-ratio: 4/3)
 {
 	header
 	{
@@ -38,20 +55,14 @@ body
 }
 header
 {
-	z-index: 1;
-
-	position: fixed;
-
 	display: flex;
+	box-sizing: border-box;
 
 	justify-content: space-between;
 
-	padding-left: 0.25em;
-	padding-right: 2.5%;
+	padding: 0 2.5% 0.1em 0.25em;
 	
-	width: calc(97.5% - 0.25em);
-	
-	height: 2em;
+	width: 100vw;
 	
 	background-color: #91B6D8;
 
@@ -74,44 +85,25 @@ header a
 	margin-inline: 0.5em;
 	color: var(--text);
 }
-#content>div
-{
-	--height: 100vh;
 
-	position: absolute;
+
+#content
+{
+	overflow: auto;
+}
+#content > div
+{
 	width: 100%;
-	height: var(--height);
+	height: 100%;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
 
-	scroll-margin-top: 5vh;
-}
-#About
+#content > #FanContentPolicy
 {
-	top: 0;
-}
-#Projects
-{
-	top: var(--height);
-}
-#People
-{
-	top: calc(var(--height) * 2);
-}
-#Contact
-{
-	top: calc(var(--height) * 3);
-}
-#Career
-{
-	top: calc(var(--height) * 4);
-}
-#FanContentPolicy
-{
-	top: calc(var(--height) * 5);
-	display: block !important;
+	display: block;
 	box-sizing: border-box;
 	padding: 2%;
 }
