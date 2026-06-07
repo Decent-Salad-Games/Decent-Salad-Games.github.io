@@ -152,6 +152,7 @@ header a
 {
 	width: 15vw;
 	height: 15vw;
+	object-fit: cover;
 }
 #Members .tray
 {
