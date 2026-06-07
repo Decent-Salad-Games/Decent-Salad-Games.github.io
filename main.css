@@ -181,6 +181,7 @@ header a
 #Members p:first-of-type
 {
 	color: var(--bright-bg);
+	text-align: center;
 }
 
 
